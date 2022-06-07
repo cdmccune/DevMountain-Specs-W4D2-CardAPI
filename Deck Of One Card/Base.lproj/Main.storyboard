@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Deck_Of_One_Card" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="Deck_Of_One_Card" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,37 +23,20 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Pe5-pb-ajP">
-                                <rect key="frame" x="96.5" y="161.5" width="221" height="69"/>
+                                <rect key="frame" x="0.0" y="170" width="414" height="60.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GZe-9j-YAR">
-                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="69"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-26-UYO">
-                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-26-UYO">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Value)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNk-3h-1xW">
-                                                <rect key="frame" x="0.0" y="30.5" width="97.5" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-ev-0L1">
-                                        <rect key="frame" x="123.5" y="0.0" width="97.5" height="69"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGR-zd-Cej">
-                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Value)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVp-hW-V2P">
-                                                <rect key="frame" x="0.0" y="30.5" width="97.5" height="38.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Draw Card&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNk-3h-1xW">
+                                                <rect key="frame" x="0.0" y="30.5" width="414" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -70,6 +53,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Draw Card">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lS-Cx-7gE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -79,12 +65,16 @@
                             <constraint firstItem="MA7-pg-Srg" firstAttribute="top" secondItem="jyZ-tV-OAe" secondAttribute="bottom" constant="50" id="PRv-VX-1vP"/>
                             <constraint firstItem="jyZ-tV-OAe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ubh-od-gKX"/>
                             <constraint firstItem="MA7-pg-Srg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hSZ-3R-cOu"/>
-                            <constraint firstItem="Pe5-pb-ajP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.533816" id="hxm-tH-36H"/>
+                            <constraint firstItem="Pe5-pb-ajP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="hxm-tH-36H"/>
                             <constraint firstItem="jyZ-tV-OAe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="td0-hb-vm0"/>
                             <constraint firstItem="jyZ-tV-OAe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xFo-Gf-Tgv"/>
                             <constraint firstItem="jyZ-tV-OAe" firstAttribute="top" secondItem="Pe5-pb-ajP" secondAttribute="bottom" constant="50" id="yDZ-py-AB1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="jyZ-tV-OAe" id="ifG-dg-AtS"/>
+                        <outlet property="cardLabel" destination="wNk-3h-1xW" id="QjJ-4s-2aP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

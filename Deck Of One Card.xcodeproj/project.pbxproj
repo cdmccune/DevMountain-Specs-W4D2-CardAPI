@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		2468E6CD284FD19C008472FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6CC284FD19C008472FC /* AppDelegate.swift */; };
 		2468E6CF284FD19C008472FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6CE284FD19C008472FC /* SceneDelegate.swift */; };
-		2468E6D1284FD19C008472FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6D0284FD19C008472FC /* ViewController.swift */; };
 		2468E6D4284FD19C008472FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2468E6D2284FD19C008472FC /* Main.storyboard */; };
 		2468E6D6284FD19E008472FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2468E6D5284FD19E008472FC /* Assets.xcassets */; };
 		2468E6D9284FD19E008472FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2468E6D7284FD19E008472FC /* LaunchScreen.storyboard */; };
+		2468E6E1284FE8B5008472FC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6E0284FE8B4008472FC /* Card.swift */; };
+		2468E6E5284FE97F008472FC /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6E4284FE97F008472FC /* CardController.swift */; };
+		2468E6E7284FEA2F008472FC /* CardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6E6284FEA2F008472FC /* CardError.swift */; };
+		2468E6E9284FEFB4008472FC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6E8284FEFB4008472FC /* UIViewControllerExtension.swift */; };
+		2468E6EB284FF2A5008472FC /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468E6EA284FF2A5008472FC /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2468E6C9284FD19C008472FC /* Deck Of One Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deck Of One Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2468E6CC284FD19C008472FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2468E6CE284FD19C008472FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2468E6D0284FD19C008472FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2468E6D3284FD19C008472FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2468E6D5284FD19E008472FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2468E6D8284FD19E008472FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2468E6DA284FD19E008472FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2468E6E0284FE8B4008472FC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2468E6E4284FE97F008472FC /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		2468E6E6284FEA2F008472FC /* CardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardError.swift; sourceTree = "<group>"; };
+		2468E6E8284FEFB4008472FC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		2468E6EA284FF2A5008472FC /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +64,17 @@
 		2468E6CB284FD19C008472FC /* Deck Of One Card */ = {
 			isa = PBXGroup;
 			children = (
+				2468E6E0284FE8B4008472FC /* Card.swift */,
 				2468E6CC284FD19C008472FC /* AppDelegate.swift */,
 				2468E6CE284FD19C008472FC /* SceneDelegate.swift */,
-				2468E6D0284FD19C008472FC /* ViewController.swift */,
 				2468E6D2284FD19C008472FC /* Main.storyboard */,
 				2468E6D5284FD19E008472FC /* Assets.xcassets */,
 				2468E6D7284FD19E008472FC /* LaunchScreen.storyboard */,
 				2468E6DA284FD19E008472FC /* Info.plist */,
+				2468E6E4284FE97F008472FC /* CardController.swift */,
+				2468E6E6284FEA2F008472FC /* CardError.swift */,
+				2468E6E8284FEFB4008472FC /* UIViewControllerExtension.swift */,
+				2468E6EA284FF2A5008472FC /* CardViewController.swift */,
 			);
 			path = "Deck Of One Card";
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2468E6D1284FD19C008472FC /* ViewController.swift in Sources */,
+				2468E6E5284FE97F008472FC /* CardController.swift in Sources */,
+				2468E6E7284FEA2F008472FC /* CardError.swift in Sources */,
 				2468E6CD284FD19C008472FC /* AppDelegate.swift in Sources */,
+				2468E6EB284FF2A5008472FC /* CardViewController.swift in Sources */,
 				2468E6CF284FD19C008472FC /* SceneDelegate.swift in Sources */,
+				2468E6E9284FEFB4008472FC /* UIViewControllerExtension.swift in Sources */,
+				2468E6E1284FE8B5008472FC /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
